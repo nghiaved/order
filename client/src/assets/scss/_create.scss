@@ -1,0 +1,54 @@
+.create {
+    margin-top: 100px;
+
+    a {
+        padding: 10px 20px;
+        background: $primary-color;
+        color: $white-color;
+        font-size: 24px;
+        font-weight: bold;
+        border-radius: 4px;
+    }
+
+    form {
+        margin-top: 40px;
+        width: 500px;
+        background: $second-color;
+        padding: 40px;
+
+        h2 {
+            color: $black-color;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            display: block;
+            margin: 20px 0;
+            border: 2px solid $black-color;
+            padding: 10px;
+            transition: .5s;
+            font-size: 20px;
+            border-radius: 4px;
+            width: 100%;
+
+            &:focus {
+                border: 2px solid $primary-color;
+            }
+        }
+
+        button {
+            padding: 10px 20px;
+            background: $primary-color;
+            color: $white-color;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 4px;
+
+            &:hover {
+                opacity: .8;
+                transition: .5s;
+            }
+        }
+    }
+}
