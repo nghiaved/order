@@ -30,6 +30,7 @@ export default function Read() {
                         <th>STT</th>
                         <th>Name</th>
                         <th>Price</th>
+                        <th>Image</th>
                         <th>Update</th>
                         <th>Delete</th>
                     </tr>
@@ -41,6 +42,9 @@ export default function Read() {
                             <td>{item.name}</td>
                             <td>{item.price}</td>
                             <td>
+                                <img src={item.image} alt='' />
+                            </td>
+                            <td>
                                 <Link to='/update' state={item}>
                                     <i className="fa-solid fa-pen btn-edit"></i>
                                 </Link>
@@ -51,7 +55,7 @@ export default function Read() {
                         </tr>
                     ) :
                         <tr>
-                            <td colSpan='5'>Không có dữ liệu</td>
+                            <td colSpan='6'>Không có dữ liệu</td>
                         </tr>
                     }
                 </tbody>

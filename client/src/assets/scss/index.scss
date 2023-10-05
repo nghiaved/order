@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
 
+$primary-color: #d19367;
+$second-color: #FFF7E6;
+$white-color: #FFFFFF;
+$black-color: #0B0B0B;
+
 * {
     padding: 0;
     margin: 0;
@@ -10,9 +15,26 @@ html {
     font-family: "Nunito", sans-serif;
 }
 
-body {
+header {
+    padding: 20px;
+    text-align: center;
+    background: $primary-color;
+
+    a {
+        margin: 0 20px;
+        color: $white-color;
+        font-size: 24px;
+        font-weight: bold;
+
+        &.active {
+            color: $black-color;
+        }
+    }
+}
+
+main {
     width: 1000px;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 a {
@@ -31,10 +53,6 @@ input {
     outline: none;
 }
 
-$primary-color: #6F4E37;
-$second-color: #FFF7E6;
-$white-color: #FFFFFF;
-$black-color: #0B0B0B;
-
 @import './read';
 @import './create';
+@import './home';
