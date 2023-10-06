@@ -9,6 +9,7 @@ axiosClient.interceptors.response.use(
     error => Promise.reject(error.response.data)
 )
 
+// Link gọi api server
 export const apiProductCreate = data =>
     axiosClient.post('/api/product/create', data)
 

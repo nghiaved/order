@@ -15,6 +15,7 @@ root.render(
     <BrowserRouter>
       <Layout>
         <Routes>
+          {/* Các đường dẫn tới giao diện */}
           <Route path='/create' element={<Create />} />
           <Route path='/read' element={<Read />} />
           <Route path='/update' element={<Update />} />

@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form'
 import FileBase64 from 'react-file-base64'
 import { apiProductCreate } from '../axios'
 
+//Hàm trả về giao diện html css
 export default function Create() {
     const { register, handleSubmit } = useForm()
     const [message, setMessage] = useState()

@@ -1,7 +1,7 @@
 const productModel = require('../models/product.model')
 
 const productController = {
-    create: (req, res, next) => {
+    create: function(req, res, next) {
         productModel.create(req.body)
             .then(product => res.json({ product }))
             .catch(next)

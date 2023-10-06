@@ -23,7 +23,7 @@ export default function Create() {
             try {
                 const res = await apiProductUpdate(data)
                 if (res.product) {
-                    navigate('/')
+                    navigate('/read')
                 }
                 e.target.reset()
             } catch (e) {
