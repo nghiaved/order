@@ -7,7 +7,8 @@ import Layout from './components/Layout'
 import Read from './pages/Read'
 import Create from './pages/Create'
 import Update from './pages/Update'
-import Home from './pages/Home'
+import Menu from './pages/Menu'
+import Order from './pages/Order'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -19,7 +20,8 @@ root.render(
           <Route path='/create' element={<Create />} />
           <Route path='/read' element={<Read />} />
           <Route path='/update' element={<Update />} />
-          <Route path='/' element={<Home />} />
+          <Route path='/order' element={<Order />} />
+          <Route path='/' element={<Menu />} />
         </Routes>
       </Layout>
     </BrowserRouter>
