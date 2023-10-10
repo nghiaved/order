@@ -1,10 +1,14 @@
 import React, { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 export default function Order() {
     const { state } = useLocation()
+    const navigate = useNavigate()
     const [products, setProducts] = useState(state)
     const [note, setNote] = useState()
+    const total = products.reduce(function (total, num) {
+        return total + num.total
+    }, 0)
 
     const deleteProduct = async id => {
         if (window.confirm("Delete")) {
@@ -13,7 +17,11 @@ export default function Order() {
     }
 
     const handleOrder = () => {
-        console.log({ products, note });
+        console.log({ products, total, note });
+    }
+
+    const handleBack = () => {
+        navigate('/')
     }
 
     return (
@@ -24,9 +32,8 @@ export default function Order() {
                     <tr>
                         <th>STT</th>
                         <th>Name</th>
-                        <th>Price</th>
                         <th>Image</th>
-                        <th>Quantity</th>
+                        <th>Price</th>
                         <th>Delete</th>
                     </tr>
                 </thead>
@@ -36,11 +43,10 @@ export default function Order() {
                             <tr key={item._id}>
                                 <td>{++index}</td>
                                 <td>{item.name}</td>
-                                <td>{item.price}</td>
                                 <td>
                                     <img src={item.image} alt='' />
                                 </td>
-                                <td>{item.quantity}</td>
+                                <td>{item.price} x {item.quantity} = {item.total}</td>
                                 <td>
                                     <i onClick={() => deleteProduct(item._id)} className="fa-solid fa-trash btn-delete"></i>
                                 </td>
@@ -52,10 +58,9 @@ export default function Order() {
                 </tbody>
             </table>
             <textarea value={note} onChange={e => setNote(e.target.value)} placeholder='Ghi chú'></textarea>
+            <h2>Total: {total}</h2>
             <button onClick={handleOrder}>Đặt món</button>
-            <button>
-                <Link to='/'>Huỷ</Link>
-            </button>
+            <button onClick={handleBack}>Huỷ</button>
         </div>
     )
 }

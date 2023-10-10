@@ -26,9 +26,8 @@ export default function Home() {
             <button onClick={handleOrder}>Order</button>
             <h1>Danh sách món ăn</h1>
             <div className='home'>
-                {products.length > 0 && products.map((item) => {
-                    let quantity = 1
-                    return <div key={item._id} className='box'>
+                {products.length > 0 && products.map((item) =>
+                    <div key={item._id} className='box'>
                         <div className="item">
                             <img src={item.image} alt='' />
                             <div className="content">
@@ -37,26 +36,23 @@ export default function Home() {
                             </div>
                             <div className="content">
                                 <span>Số lượng: </span>
-                                <input type='number' onChange={e => {
-                                    quantity = e.target.value
+                                <input disabled={order.includes(item._id) ? true : false} type='number' onChange={e => {
+                                    item.quantity = e.target.value
                                 }} defaultValue='1' min='1' max='99' />
                             </div>
-                            {
-                                !order.includes(item._id) ?
-                                    <button onClick={() => {
-                                        setList([...list, { ...item, quantity }])
-                                        setOrder([...order, item._id])
-                                    }}>
-                                        Thêm
-                                    </button>
-                                    : <button className='danger' onClick={() =>
-                                        setOrder(order.filter(el => el !== item._id))}>
-                                        Xoá
-                                    </button>
-                            }
+                            <button className={!order.includes(item._id) ? '' : 'danger'} onClick={() => {
+                                if (!order.includes(item._id)) {
+                                    setOrder([...order, item._id])
+                                    setList([...list, { ...item, total: item.price * item.quantity, quantity: item.quantity ?? 1 }])
+                                } else {
+                                    setOrder(order.filter(el => el !== item._id))
+                                    setList(list.filter(el => el._id !== item._id))
+                                }
+                            }}>
+                                {!order.includes(item._id) ? 'Thêm' : 'Xoá'}
+                            </button>
                         </div>
                     </div>
-                }
                 )}
             </div >
         </div >
