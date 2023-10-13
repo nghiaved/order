@@ -4,9 +4,9 @@ import { useLocation, useNavigate } from 'react-router-dom'
 export default function Order() {
     const { state } = useLocation()
     const navigate = useNavigate()
-    const [products, setProducts] = useState(state)
+    const [products, setProducts] = useState(state && state.list)
     const [note, setNote] = useState()
-    const total = products.reduce(function (total, num) {
+    const total = products && products.length > 0 && products.reduce(function (total, num) {
         return total + num.total
     }, 0)
 
@@ -17,7 +17,8 @@ export default function Order() {
     }
 
     const handleOrder = () => {
-        console.log({ products, total, note });
+        navigate('/staff', { state: { products, total, note, number: state.number } });
+        alert('Ordered')
     }
 
     const handleBack = () => {

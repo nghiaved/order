@@ -7,7 +7,7 @@ export default function Layout({ children }) {
             <header>
                 <NavLink to='/'>Menu</NavLink>
                 <NavLink to='/order'>Order</NavLink>
-                <NavLink to='/read'>Admin</NavLink>
+                <NavLink to='/admin'>Admin</NavLink>
                 <NavLink to='/staff'>Staff</NavLink>
                 <NavLink to='/kitchen'>Kitchen</NavLink>
             </header>
