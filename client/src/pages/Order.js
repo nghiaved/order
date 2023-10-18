@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
+import { apiOrderCreate } from '../axios'
 
 export default function Order() {
     const { state } = useLocation()
@@ -16,9 +17,13 @@ export default function Order() {
         }
     }
 
-    const handleOrder = () => {
-        navigate('/staff', { state: { products, total, note, number: state.number } });
-        alert('Ordered')
+    const handleOrder = async () => {
+        if (state) {
+            await apiOrderCreate({ products, total, note, number: state.number || 20 })
+            alert('Please wait for staff to confirm your order!')
+        } else {
+            alert('Order was not successful!')
+        }
     }
 
     const handleBack = () => {

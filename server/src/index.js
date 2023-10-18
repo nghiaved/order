@@ -28,6 +28,7 @@ app.use(cors())
 
 //Đường dẫn tới các api
 require('./routes/product.route')(app)
+require('./routes/order.route')(app)
 
 const PORT = 8080
 app.listen(PORT, () => console.log('App listening at http://localhost:' + PORT))

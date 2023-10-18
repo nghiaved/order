@@ -10,6 +10,7 @@ import Update from './pages/Update'
 import Menu from './pages/Menu'
 import Order from './pages/Order'
 import Staff from './pages/Staff'
+import Kitchen from './pages/Kitchen'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -23,6 +24,7 @@ root.render(
           <Route path='/admin' element={<Admin />} />
           <Route path='/order' element={<Order />} />
           <Route path='/staff' element={<Staff />} />
+          <Route path='/kitchen' element={<Kitchen />} />
           <Route path='/' element={<Menu />} />
         </Routes>
       </Layout>

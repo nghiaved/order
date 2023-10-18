@@ -21,3 +21,16 @@ export const apiProductUpdate = data =>
 
 export const apiProductDelete = id =>
     axiosClient.delete('/api/product/delete/' + id)
+
+// Link gọi api server
+export const apiOrderCreate = data =>
+    axiosClient.post('/api/order/create', data)
+
+export const apiOrderRead = () =>
+    axiosClient.get('/api/order/read')
+
+export const apiOrderUpdate = data =>
+    axiosClient.put(`/api/order/update/${data._id}`, data)
+
+export const apiOrderDelete = id =>
+    axiosClient.delete('/api/order/delete/' + id)

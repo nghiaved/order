@@ -35,20 +35,6 @@
         color: $black-color;
     }
 
-    tbody tr:nth-child(odd) i.btn-edit {
-        color: $white-color;
-    }
-
-    tbody tr:nth-child(odd) {
-        background: $primary-color;
-        color: $white-color;
-    }
-
-    tbody tr:nth-child(even) {
-        background: $second-color;
-        color: $black-color;
-    }
-
     tbody tr td i.btn-edit:hover {
         color: orange;
     }
@@ -69,6 +55,43 @@
         border: 2px solid $black-color;
     }
 
+    td ol {
+        margin-left: 20px;
+
+        li {
+
+            span {
+                display: block;
+
+                &:first-child {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    td button {
+        padding: 8px 16px;
+        border-radius: 4px;
+        margin: 0 10px;
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+
+        &.confirm {
+            background: green;
+        }
+
+        &.cancel {
+            background: red;
+        }
+
+        &.waiting {
+            background: orange;
+        }
+    }
+
     textarea {
         margin: 20px 0;
         padding: 10px;
@@ -76,7 +99,7 @@
         height: 100px;
     }
 
-    button {
+    &>button {
         background: $primary-color;
         color: $white-color;
         padding: 10px 40px;
