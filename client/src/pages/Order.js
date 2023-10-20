@@ -64,7 +64,7 @@ export default function Order() {
                 </tbody>
             </table>
             <textarea value={note} onChange={e => setNote(e.target.value)} placeholder='Ghi chú'></textarea>
-            <h2>Total: {total}</h2>
+            <h2>Tổng cộng: {total}</h2>
             <button onClick={handleOrder}>Đặt món</button>
             <button onClick={handleBack}>Huỷ</button>
         </div>

@@ -53,8 +53,8 @@ export default function Staff() {
                                 <td>{item.note}</td>
                                 <td>
                                     {item.status
-                                        ? <h3>Finished</h3>
-                                        : <button className='confirm' onClick={() => handleEdit({ ...item, status: true })}>Done</button>
+                                        ? <h3>Đã xong</h3>
+                                        : <button className='confirm' onClick={() => handleEdit({ ...item, status: true })}>Hoàn thành</button>
                                     }
                                 </td>
                             </tr>

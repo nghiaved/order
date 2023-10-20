@@ -70,12 +70,12 @@ export default function Staff() {
                                 {item.confirm
                                     ? item.status
                                         ? item.delivery
-                                            ? <h3>Finished</h3>
-                                            : <button className='confirm' onClick={() => handleDelivery({ ...item, delivery: true })}>Delivery</button>
-                                        : <button className='waiting' disabled>Waiting</button>
+                                            ? <h3>Đã xong</h3>
+                                            : <button className='confirm' onClick={() => handleDelivery({ ...item, delivery: true })}>Giao món</button>
+                                        : <button className='waiting' disabled>Đợi chế biến</button>
                                     : <>
-                                        <button className='confirm' onClick={() => handleConfirm({ ...item, confirm: true })}>Confirm</button>
-                                        <button className='cancel' onClick={() => handleCancel(item._id)}>Cancel</button>
+                                        <button className='confirm' onClick={() => handleConfirm({ ...item, confirm: true })}>Xác nhận</button>
+                                        <button className='cancel' onClick={() => handleCancel(item._id)}>Huỷ bỏ</button>
                                     </>}
                             </td>
                         </tr>

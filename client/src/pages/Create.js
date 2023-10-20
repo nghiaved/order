@@ -30,7 +30,7 @@ export default function Create() {
 
     return (
         <div className='create'>
-            <Link to='/read'>Read</Link>
+            <Link to='/admin'>Read</Link>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <h2>Create</h2>
                 <input required autoComplete="off" {...register('name', { required: true })} placeholder='Name' />
