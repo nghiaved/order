@@ -34,3 +34,11 @@ export const apiOrderUpdate = data =>
 
 export const apiOrderDelete = id =>
     axiosClient.delete('/api/order/delete/' + id)
+
+
+//User
+export const apiUserRegister = data =>
+    axiosClient.post('/api/user/register', data)
+
+export const apiUserLogin = data =>
+    axiosClient.post('/api/user/login', data)

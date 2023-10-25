@@ -16,19 +16,20 @@ html {
 }
 
 header {
-    padding: 20px;
+    padding: 20px 40px;
+    margin-bottom: 20px;
     text-align: center;
     background: $primary-color;
+    color: $white-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    a {
+    span {
         margin: 0 20px;
-        color: $white-color;
         font-size: 24px;
         font-weight: bold;
-
-        &.active {
-            color: $black-color;
-        }
+        cursor: pointer;
     }
 }
 
@@ -62,3 +63,4 @@ input {
 @import './read';
 @import './create';
 @import './home';
+@import './form';
