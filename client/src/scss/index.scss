@@ -10,9 +10,6 @@ $black-color: #0B0B0B;
     box-sizing: border-box;
 }
 
-h1{
-    color: $primary-color;
-}
 body {
     background-image: url(https://img.freepik.com/premium-vector/abstract-pattern-background-with-futuristic-modern-style-concept_7505-2435.jpg);
     background-size: 500px;
@@ -22,19 +19,19 @@ html {
 }
 
 header {
-    padding: 0; //20px;
-    text-align: center;
+    padding: 0;
+    margin-bottom: 20px;
     background: $primary-color;
+    color: $white-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    a {
+    span {
         margin: 0 20px;
-        color: $white-color;
         font-size: 24px;
         font-weight: bold;
-
-        &.active {
-            color: $black-color;
-        }
+        cursor: pointer;
     }
 }
 
@@ -65,6 +62,11 @@ input {
     }
 }
 
+.center {
+    justify-content: center;
+}
+
 @import './read';
 @import './create';
 @import './home';
+@import './form';

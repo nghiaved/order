@@ -36,7 +36,7 @@ export default function Read() {
 
     return (
         <div className='read'>
-             <header>
+             <header className='center'>
                 <img src='https://media.baamboozle.com/uploads/images/90575/1600786853_367509' height="150px" alt='logo của trang'></img>
             </header>
             <br></br>
