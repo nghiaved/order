@@ -36,16 +36,22 @@ export default function Read() {
 
     return (
         <div className='read'>
-            <h1>Danh sách đơn hàng</h1>
+             <header>
+                <img src='https://media.baamboozle.com/uploads/images/90575/1600786853_367509' height="150px" alt='logo của trang'></img>
+            </header>
+            <br></br>
+            <br></br>
+            <h1>DANH SÁCH ĐƠN HÀNG</h1>
+            <div className='auto'>
             <table>
                 <thead>
                     <tr>
                         <th>STT</th>
                         <th>Bàn</th>
-                        <th>Món ăn</th>
+                        <th>Tên sản phẩm</th>
                         <th>Giá</th>
                         <th>Ghi chú</th>
-                        <th>Action</th>
+                        <th>Xóa</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -78,15 +84,17 @@ export default function Read() {
                     }
                 </tbody>
             </table>
+            </div>
             <h2>Tổng cộng: {total}</h2>
             <Link to='/create'>Create</Link>
+            <div className='auto'>
             <table>
                 <thead>
                     <tr>
                         <th>STT</th>
-                        <th>Name</th>
-                        <th>Price</th>
-                        <th>Image</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Hình ảnh</th>
                         <th>Update</th>
                         <th>Delete</th>
                     </tr>
@@ -116,6 +124,7 @@ export default function Read() {
                     }
                 </tbody>
             </table>
+            </div>
         </div>
     )
 }

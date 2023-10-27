@@ -32,15 +32,21 @@ export default function Order() {
 
     return (
         <div className='read'>
-            <h1>Danh sách đặt món</h1>
+             <header>
+                <img src='https://media.baamboozle.com/uploads/images/90575/1600786853_367509' height="150px" alt='logo của trang'></img>
+            </header>
+            <br></br>
+            <br></br>
+            <h1>DANH SÁCH ĐẶT MÓN</h1>
+            <div className='auto'>
             <table>
                 <thead>
                     <tr>
                         <th>STT</th>
-                        <th>Name</th>
-                        <th>Image</th>
-                        <th>Price</th>
-                        <th>Delete</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Hình ảnh</th>
+                        <th>Giá</th>
+                        <th>Xóa</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -63,6 +69,7 @@ export default function Order() {
                     }
                 </tbody>
             </table>
+            </div>
             <textarea value={note} onChange={e => setNote(e.target.value)} placeholder='Ghi chú'></textarea>
             <h2>Tổng cộng: {total}</h2>
             <button onClick={handleOrder}>Đặt món</button>

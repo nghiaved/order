@@ -24,8 +24,13 @@ export default function Home() {
 
     return (
         <div className='home-wrapper'>
+             <header>
+                <img src='https://media.baamboozle.com/uploads/images/90575/1600786853_367509' height="150px" alt='logo của trang'></img>
+            </header>
+            <br></br>
+            <br></br>
             <button onClick={handleOrder}>Order</button>
-            <h1>Danh sách món ăn</h1>
+            <h1>DANH SÁCH MÓN ĂN</h1>
             <div className='home'>
                 {products.length > 0 && products.map((item) => {
                     item.quantity = 1

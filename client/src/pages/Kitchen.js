@@ -24,13 +24,20 @@ export default function Staff() {
 
     return (
         <div className='read'>
+            <header>
+                <img src='https://media.baamboozle.com/uploads/images/90575/1600786853_367509' height="150px" alt='logo của trang'></img>
+            </header>
+            <br></br>
+            <br></br>
+            <h1>DANH SÁCH ĐƠN HÀNG</h1>
+            <div className='auto'>
             <table>
                 <thead>
                     <tr>
                         <th>Bàn</th>
-                        <th>Món ăn</th>
+                        <th>Tên sản phẩm</th>
                         <th>Ghi chú</th>
-                        <th>Action</th>
+                        <th>Trạng thái</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -67,6 +74,7 @@ export default function Staff() {
                     }
                 </tbody>
             </table>
+            </div>
         </div >
     )
 }

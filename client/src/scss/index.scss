@@ -1,22 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
 
-$primary-color: #d19367;
-$second-color: #FFF7E6;
+$primary-color: #004d2a;
+$second-color: #6fe8a2;
 $white-color: #FFFFFF;
 $black-color: #0B0B0B;
-
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+h1{
+    color: $primary-color;
+}
+body {
+    background-image: url(https://img.freepik.com/premium-vector/abstract-pattern-background-with-futuristic-modern-style-concept_7505-2435.jpg);
+    background-size: 500px;
+}
 html {
-    font-family: "Nunito", sans-serif;
+    font-family: 'Saira', sans-serif;
 }
 
 header {
-    padding: 20px;
+    padding: 0; //20px;
     text-align: center;
     background: $primary-color;
 
